@@ -1,5 +1,4 @@
 import { HtmlHTMLAttributes } from "react";
-import "./Layout.scss";
 import { menuItems } from "./navigation.config";
 import { Navigation } from "./Navigations/Navigation";
 
