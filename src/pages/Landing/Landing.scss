@@ -1,0 +1,105 @@
+.landing-page {
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  z-index: -1;
+  .landing-content {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .left-content {
+      display: inline-block;
+      margin-top: auto;
+      margin-bottom: auto;
+      h1 {
+        margin-bottom: 0px;
+        margin-top: 0px;
+      }
+      .divider-line {
+        margin: 6px 0px;
+        &::before {
+          content: "";
+          left: 0;
+          height: 1px;
+          width: 250px;
+          display: block;
+        }
+      }
+      h2 {
+        margin: 0px;
+      }
+    }
+
+    .graphics-container {
+      width: 450px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      .brand-avatar {
+        height: 150px;
+        position: absolute;
+        left: 90px;
+      }
+    }
+  }
+}
+
+/* ====== svg animation style ===== */
+#dotted-square,
+#cirlce-line,
+#geo-wave,
+#star {
+  animation: floatY 1s infinite ease-in-out alternate;
+}
+
+#dotted-square {
+  animation-delay: 0.1s;
+}
+#geo-wave,
+#star {
+  animation-delay: 0.4s;
+}
+
+#cirlce-line {
+  animation-delay: 0.3s;
+}
+
+#angle-brace {
+  animation: floatX 1s infinite ease-in-out alternate;
+  animation-delay: 0.8s;
+}
+
+#dot-circle {
+  animation-name: spinR;
+  animation-duration: 40000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 400px 150px;
+}
+
+@keyframes floatX {
+  100% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes floatY {
+  100% {
+    transform: translateY(15px);
+  }
+}
+
+@keyframes spinR {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* ====== end ===== */

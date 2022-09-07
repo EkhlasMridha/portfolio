@@ -1,0 +1,14 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  h2 {
+    margin: 0;
+    padding: 0.83em 0em;
+  }
+  .about-content {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 21px;
+  }
+}

@@ -1,8 +1,9 @@
 @use "../../styles/colors" as theme;
 
 .header-toolbar {
-  position: relative;
+  width: 100%;
   nav {
+    position: relative;
     display: flex;
     .nav-container {
       list-style: none;
