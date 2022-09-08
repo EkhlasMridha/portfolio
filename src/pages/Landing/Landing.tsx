@@ -3,7 +3,7 @@ import { LandingAvatar, SvgLanding } from "./SvgLanding";
 
 export const Landing = (props: any) => {
   return (
-    <div className="landing-page primary-background primary-textcolor top-0 h-screen">
+    <section className="landing-page primary-background primary-textcolor top-0 h-screen">
       <div className="landing-content">
         <div className="left-content">
           <h1>Hi!, I'M</h1>
@@ -16,6 +16,6 @@ export const Landing = (props: any) => {
           <SvgLanding />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
