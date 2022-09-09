@@ -1,0 +1,11 @@
+.workpage-header {
+  display: flex;
+  flex-direction: row;
+  height: 45px;
+  .left-content {
+    flex: 1 1 auto;
+  }
+  .right-content {
+    flex: 1 1 auto;
+  }
+}

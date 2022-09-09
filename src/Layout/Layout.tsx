@@ -1,8 +1,10 @@
 import { HtmlHTMLAttributes } from "react";
-import { menuItems } from "./navigation.config";
+import { getMenuItems } from "./navigation.config";
 import { Navigation } from "./Navigations/Navigation";
 
 export const Layout = (props: HtmlHTMLAttributes<any>) => {
+  let menuItems = getMenuItems(props);
+
   return (
     <>
       <Navigation
