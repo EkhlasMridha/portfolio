@@ -1,0 +1,90 @@
+@use "../../styles/colors" as theme;
+
+.half-section {
+  flex: 1 0 auto;
+}
+
+.section-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-container {
+  flex-wrap: wrap;
+}
+
+.input-item {
+  label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .input-element {
+    margin-bottom: 18px;
+    position: relative;
+    align-items: center;
+    display: flex;
+    .addon-before {
+      position: absolute;
+      display: flex;
+      flex: 1 1 auto;
+      height: 0.9rem;
+      z-index: 9999;
+      margin-top: auto;
+      margin-left: 10px;
+      align-items: center;
+    }
+
+    textarea,
+    input {
+      border: 1px solid rgba(theme.$primary-color, 0.6);
+      border-radius: 4px;
+      padding: 0.625rem 1.8rem;
+      transition: 0.3s ease-in-out;
+      &:focus {
+        outline: none;
+        border-color: theme.$highlight-color;
+      }
+    }
+
+    textarea {
+      padding: 0.625rem;
+      resize: vertical;
+      width: 100%;
+    }
+  }
+}
+
+.submit-button {
+  display: flex;
+  justify-content: end;
+  margin-top: 14px;
+  button {
+    background: theme.$highlight-color;
+    border: none;
+    padding: 8px 12px;
+    min-width: 100px;
+    border-radius: 2px;
+    // cursor: pointer;
+    box-shadow: 1px 1px 4px 0px #242424;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      transition-duration: 0.1s;
+      background: darken(theme.$highlight-color, 10%);
+    }
+  }
+}
+
+.section-2-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}

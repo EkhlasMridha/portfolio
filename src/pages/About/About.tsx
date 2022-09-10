@@ -4,7 +4,7 @@ export const About = (props: any) => {
   return (
     <section
       key={"about"}
-      className="about-container secondary-background secondary-textcolor min-h-screen section-container"
+      className="about-container secondary-background flx-col secondary-textcolor min-h-screen section-container"
       id="about"
     >
       <div className="about-content content-container padding-side-20">

@@ -4,7 +4,7 @@ export const Works = (props: any) => {
   return (
     <section
       key={"works"}
-      className="primary-textcolor min-h-screen primary-background workpage-container section-container"
+      className="primary-textcolor flx-col min-h-screen primary-background workpage-container section-container"
       id="works"
     >
       <div className="workpage-content content-container padding-side-20">

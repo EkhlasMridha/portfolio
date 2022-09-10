@@ -1,4 +1,5 @@
 import { HtmlHTMLAttributes } from "react";
+import { Footer } from "./Footer";
 import { getMenuItems } from "./navigation.config";
 import { Navigation } from "./Navigations/Navigation";
 
@@ -12,6 +13,8 @@ export const Layout = (props: HtmlHTMLAttributes<any>) => {
         style={{ zIndex: 40 }}
       />
       <main children={props?.children} />
+
+      <Footer />
     </>
   );
 };

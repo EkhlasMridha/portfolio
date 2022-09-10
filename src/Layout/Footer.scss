@@ -1,0 +1,32 @@
+@use "../styles/colors" as theme;
+
+.app-footer {
+  padding-top: 18px;
+  .footer-content-container {
+    min-height: 100px;
+    .app-footer-content {
+      margin: auto;
+      width: 100%;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      a {
+        color: currentColor;
+        &:hover {
+          color: theme.$highlight-color;
+        }
+      }
+      .left-footer {
+        &:hover {
+          color: theme.$highlight-color;
+        }
+        a {
+          text-decoration: none;
+          color: currentColor;
+          // &:hover {
+          //   color: theme.$highlight-color;
+          // }
+        }
+      }
+    }
+  }
+}
