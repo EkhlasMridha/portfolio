@@ -4,12 +4,37 @@ export const Works = (props: any) => {
   return (
     <section
       key={"works"}
-      className="secondary-textcolor min-h-screen white-background"
+      className="primary-textcolor min-h-screen primary-background workpage-container section-container"
       id="works"
     >
-      <div className="workpage-header">
-        <div className="highlight-background left-content"></div>
-        <div className="right-content white-background">MY WORKS</div>
+      <div className="workpage-content content-container padding-side-20">
+        <div className="workpage-header">
+          <h1 className="uppercase hr-lines">
+            <span>My Works</span>
+          </h1>
+        </div>
+        <div className="flx row workitem-container">
+          <div className="work-item">
+            <h2 className="highlight-color text-center">Event Ticketing</h2>
+            <p className="text-center">
+              Ticketing website with admin dashboard to manage and sell tickets
+              of a created event.
+            </p>
+          </div>
+          <div className="work-item">
+            <h2 className="highlight-color text-center">Booky</h2>
+            <p className="text-center">
+              A simple hotel booking system to manage bookings of a hotel.
+            </p>
+          </div>
+          <div className="work-item">
+            <h2 className="highlight-color text-center">Moo-In</h2>
+            <p className="text-center">
+              Restaurant order management system to take customer orders, print
+              envoice and take payment.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

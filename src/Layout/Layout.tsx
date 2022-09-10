@@ -4,7 +4,6 @@ import { Navigation } from "./Navigations/Navigation";
 
 export const Layout = (props: HtmlHTMLAttributes<any>) => {
   let menuItems = getMenuItems(props);
-
   return (
     <>
       <Navigation

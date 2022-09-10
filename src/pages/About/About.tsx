@@ -4,10 +4,10 @@ export const About = (props: any) => {
   return (
     <section
       key={"about"}
-      className="about-container secondary-background secondary-textcolor min-h-screen"
+      className="about-container secondary-background secondary-textcolor min-h-screen section-container"
       id="about"
     >
-      <div className="about-content padding-side-20">
+      <div className="about-content content-container padding-side-20">
         <h2>ABOUT</h2>
         <p>
           I am a full stack web developer skilled with various type of web

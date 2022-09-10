@@ -1,11 +1,67 @@
-.workpage-header {
-  display: flex;
-  flex-direction: row;
-  height: 45px;
-  .left-content {
-    flex: 1 1 auto;
+@use "../../styles/colors" as theme;
+
+.workpage-container {
+  .workpage-content {
+    margin-left: auto;
+    margin-right: auto;
   }
-  .right-content {
-    flex: 1 1 auto;
+  .workpage-header {
+    display: flex;
+    justify-content: center;
+
+    .hr-lines {
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      span {
+        background: theme.$primary-color;
+        z-index: 5;
+      }
+    }
+    .hr-lines::before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100px;
+      background: theme.$secondary-color;
+      left: 0;
+      top: 50%;
+      animation: lineanim 2s ease;
+    }
+    .hr-lines::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100px;
+      background: theme.$secondary-color;
+      right: 0;
+      top: 50%;
+      animation: lineanim 2s ease;
+    }
+  }
+
+  .workitem-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 8px;
+    column-gap: 8px;
+  }
+  .work-item {
+    max-width: 250px;
+    justify-content: center;
+  }
+}
+
+@keyframes lineanim {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100px;
   }
 }

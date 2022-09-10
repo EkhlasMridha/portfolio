@@ -4,6 +4,7 @@ import { Landing } from "./pages/Landing/Landing";
 import { Works } from "./pages/Works/Works";
 
 function App() {
+  console.log("App");
   return (
     <Layout>
       <Landing />

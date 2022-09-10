@@ -67,7 +67,7 @@ html {
 }
 
 .highlight-color {
-  background: colors.$highlight-color;
+  color: colors.$highlight-color;
 }
 
 .primary-textcolor {
@@ -90,6 +90,14 @@ html {
   position: fixed;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
+.content-container {
+  max-width: 950px;
+}
+
 .top-0 {
   top: 0;
 }
@@ -104,4 +112,22 @@ html {
 
 .padding-side-20 {
   padding: 0px 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flx {
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
