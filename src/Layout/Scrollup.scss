@@ -1,0 +1,22 @@
+@use "../styles/colors" as theme;
+
+.scrollup-container {
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  bottom: 45px;
+  right: 45px;
+  display: flex;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 0px rgba(theme.$highlight-color, 0.6);
+  z-index: 9999;
+  &:hover {
+    background: darken(theme.$highlight-color, 10%);
+  }
+  .scrollup-button {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    position: sticky;
+  }
+}

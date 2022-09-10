@@ -10,7 +10,7 @@ export const Works = (props: any) => {
       <div className="workpage-content content-container padding-side-20">
         <div className="workpage-header">
           <h1 className="uppercase hr-lines">
-            <span>My Works</span>
+            <span>Top Works</span>
           </h1>
         </div>
         <div className="flx row workitem-container">
