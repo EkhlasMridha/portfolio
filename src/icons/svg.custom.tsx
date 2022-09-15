@@ -5,6 +5,8 @@ import { ReactComponent as FooterShape } from "../svgs/footer-shape.svg";
 import { ReactComponent as LinkedInCircle } from "../svgs/linkedin.svg";
 import { ReactComponent as GithubIcon } from "../svgs/github.svg";
 import { ReactComponent as UpArrow } from "../svgs/scrollup.svg";
+import { ReactComponent as LeftArrow } from "../svgs/left-arrow.svg";
+import { ReactComponent as AvatarShape } from "../svgs/avatar-icon.svg";
 
 export const UserFilled = (props: SVGProps<any>) => {
   return <User {...props} />;
@@ -15,7 +17,7 @@ export const MailIFilled = (props: SVGProps<any>) => {
 };
 
 export const FooterRound = (props: SVGProps<any>) => {
-  return <FooterShape />;
+  return <FooterShape {...props} />;
 };
 
 export const LinkedIn = (props: SVGProps<any>) => {
@@ -28,4 +30,12 @@ export const Github = (props: SVGProps<any>) => {
 
 export const ScrollupIcon = (props: SVGProps<any>) => {
   return <UpArrow {...props} />;
+};
+
+export const LeftArrowIcon = (props: SVGProps<any>) => {
+  return <LeftArrow {...props} />;
+};
+
+export const AvatarIcon = (props: SVGProps<any>) => {
+  return <AvatarShape {...props} />;
 };

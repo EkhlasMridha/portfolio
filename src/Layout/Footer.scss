@@ -2,29 +2,23 @@
 
 .app-footer {
   padding-top: 18px;
+  position: relative;
   .footer-content-container {
     min-height: 100px;
     .app-footer-content {
       margin: auto;
       width: 100%;
-      justify-content: space-around;
       flex-wrap: wrap;
+      .footer-avatar {
+        top: 20%;
+        position: absolute;
+        left: 0;
+        width: 100%;
+      }
       a {
         color: currentColor;
         &:hover {
           color: theme.$highlight-color;
-        }
-      }
-      .left-footer {
-        &:hover {
-          color: theme.$highlight-color;
-        }
-        a {
-          text-decoration: none;
-          color: currentColor;
-          // &:hover {
-          //   color: theme.$highlight-color;
-          // }
         }
       }
     }

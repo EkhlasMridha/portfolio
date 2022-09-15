@@ -20,6 +20,20 @@ export const Contact = (props: any) => {
           >
             Send me a message
           </div>
+          <div
+            className="flx contact-mail cursor-pointers"
+            style={{
+              justifyContent: "center",
+              paddingTop: "14px",
+              alignItems: "center",
+              columnGap: 8,
+            }}
+          >
+            <MailIFilled height={"14px"} />{" "}
+            <a className="cursor-pointer" href="mailto:ekhlasmridha@gmail.com">
+              ekhlasmridha@gmail.com
+            </a>
+          </div>
         </div>
       </div>
       <div className="section-1 half-section secondary-background ">

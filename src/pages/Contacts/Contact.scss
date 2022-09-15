@@ -59,7 +59,7 @@
 
 .submit-button {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin-top: 14px;
   button {
     background: theme.$highlight-color;
@@ -87,4 +87,17 @@
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
+}
+
+.contact-mail {
+  &:hover {
+    color: theme.$highlight-color;
+  }
+  a {
+    text-decoration: none;
+    color: currentColor;
+    // &:hover {
+    //   color: theme.$highlight-color;
+    // }
+  }
 }

@@ -99,10 +99,15 @@ html {
   max-width: 950px;
 }
 
+p {
+  cursor: text;
+}
+
 .cursor-text {
   cursor: text;
 }
 
+a,
 .cursor-pointer {
   cursor: url("../svgs/cursor-hand.svg"), pointer;
 }
@@ -135,8 +140,15 @@ html {
   flex-direction: row;
 }
 
+.flx-wrap {
+  flex-wrap: wrap;
+}
+
 .flx-col {
   flex-direction: column;
+}
+.justify-center {
+  justify-content: center;
 }
 
 .section-container {

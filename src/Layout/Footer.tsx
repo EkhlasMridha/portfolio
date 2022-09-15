@@ -1,4 +1,5 @@
 import {
+  AvatarIcon,
   FooterRound,
   Github,
   LinkedIn,
@@ -8,23 +9,21 @@ import "./Footer.scss";
 
 export const Footer = (props: any) => {
   return (
-    <footer
-      className="white-background app-footer flx flx-col app-footer"
-      //   style={{ display: "flex", flexDirection: "column" }}
-    >
-      <FooterRound style={{ width: "100vw" }} />
+    <footer className="white-background app-footer flx flx-col app-footer">
+      <FooterRound style={{ display: "block" }} />
       <div className="footer-content-container primary-background flx">
-        <div className="content-container padding-side-20 primary-textcolor app-footer-content flx">
-          <div
-            className="flx left-footer cursor-pointers"
-            style={{ alignItems: "center", columnGap: 8 }}
-          >
-            <MailIFilled height={"14px"} />{" "}
-            <a className="cursor-pointer" href="mailto:ekhlasmridha@gmail.com">
-              ekhlasmridha@gmail.com
-            </a>
+        <div
+          style={{ rowGap: 20 }}
+          className="content-container padding-side-20 primary-textcolor justify-center app-footer-content flx flx-col"
+        >
+          <div className="footer-avatar flx justify-center">
+            <AvatarIcon height={40} />
           </div>
-          <div className="flx primary-textcolor" style={{ columnGap: 21 }}>
+
+          <div
+            className="flx primary-textcolor justify-center"
+            style={{ columnGap: 21 }}
+          >
             <a
               className="cursor-pointer"
               href="https://github.com/EkhlasMridha"
