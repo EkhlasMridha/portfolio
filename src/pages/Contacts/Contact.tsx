@@ -9,30 +9,17 @@ export const Contact = (props: any) => {
       id="contact"
     >
       <div className="section-1 half-section  primary-background primary-textcolor">
-        <div className="padding-side-20 content-container">
-          <h1 className="text-center">Let's Talk</h1>
-          <div className="text-center">
-            Do you need a digital solution to your problem?
+        <div className="padding-side-20 content-container contact-text-section">
+          {/* <h1 className="text-center">Let's Talk</h1> */}
+          <div className="uppercase highlight-color contact-title">Contact</div>
+          <div className="question">Need a solution to your problem?</div>
+          <div className="q-detail">
+            Be ready to enter the digital world and tell me about your idea to
+            get your dream application.
           </div>
-          <div
-            className="text-center highlight-color"
-            style={{ marginTop: "12px" }}
-          >
-            Send me a message
-          </div>
-          <div
-            className="flx contact-mail cursor-pointers"
-            style={{
-              justifyContent: "center",
-              paddingTop: "14px",
-              alignItems: "center",
-              columnGap: 8,
-            }}
-          >
-            <MailIFilled height={"14px"} />{" "}
-            <a className="cursor-pointer" href="mailto:ekhlasmridha@gmail.com">
-              ekhlasmridha@gmail.com
-            </a>
+          <div className="contact-mail cursor-pointer">
+            <MailIFilled height={"14px"} />
+            <a href="mailto:ekhlasmridha@gmail.com">ekhlasmridha@gmail.com</a>
           </div>
         </div>
       </div>

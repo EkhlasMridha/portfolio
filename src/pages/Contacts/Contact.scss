@@ -10,6 +10,28 @@
   justify-content: center;
 }
 
+.contact-text-section {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  .question {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 3rem;
+  }
+  .q-detail {
+    margin-top: 10px;
+    color: rgba(theme.$secondary-color, 0.7);
+  }
+}
+
+.contact-title {
+  line-height: 1.4rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
 .contact-container {
   flex-wrap: wrap;
 }
@@ -35,6 +57,7 @@
       margin-top: auto;
       margin-left: 10px;
       align-items: center;
+      color: lighten(theme.$primary-color, 10%);
     }
 
     textarea,
@@ -90,14 +113,14 @@
 }
 
 .contact-mail {
+  margin-top: 2.5rem;
+  display: inline-block;
   &:hover {
     color: theme.$highlight-color;
   }
   a {
     text-decoration: none;
     color: currentColor;
-    // &:hover {
-    //   color: theme.$highlight-color;
-    // }
+    margin-left: 8px;
   }
 }
