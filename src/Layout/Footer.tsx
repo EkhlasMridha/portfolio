@@ -17,7 +17,7 @@ export const Footer = (props: any) => {
           className="content-container padding-side-20 primary-textcolor justify-center app-footer-content flx flx-col"
         >
           <div className="footer-avatar flx justify-center">
-            <AvatarIcon height={40} />
+            <AvatarIcon height={40} className="avatar-icon" />
           </div>
 
           <div

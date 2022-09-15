@@ -24,3 +24,17 @@
     }
   }
 }
+
+@media screen and (max-width: 450px) {
+  .app-footer {
+    .footer-content-container {
+      .app-footer-content {
+        .footer-avatar {
+          .avatar-icon {
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+}

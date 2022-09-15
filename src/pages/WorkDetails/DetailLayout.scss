@@ -7,6 +7,43 @@
   padding: 0px 20px;
   h1 {
     color: lighten(theme.$primary-color, 25%);
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .detail-container {
+    figure {
+      width: 300px;
+      img {
+        width: 300px;
+        height: unset;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .detail-container {
+    figure {
+      width: 250px;
+      img {
+        width: 250px;
+        height: unset;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .detail-container {
+    figure {
+      width: 150px;
+      img {
+        width: 150px;
+        height: unset;
+      }
+    }
   }
 }
 
