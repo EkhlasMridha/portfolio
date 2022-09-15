@@ -5,76 +5,7 @@
         xmlns:xlink="http://www.w3.org/1999/xlink"
         viewBox="0 0 700 480"
       >
-        <defs>
-          <linearGradient
-            id="linear-gradient"
-            x1="919.83"
-            y1="617.66"
-            x2="931.85"
-            y2="891.69"
-            gradientTransform="translate(1231.41 -631.95) rotate(90)"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop offset="0" stop-color="#f6cb08" />
-            <stop offset="1" stop-color="#feb802" />
-          </linearGradient>
-          <linearGradient
-            id="linear-gradient-2"
-            x1="917.89"
-            y1="617.74"
-            x2="929.91"
-            y2="891.77"
-            xlink:href="#linear-gradient"
-          />
-          <linearGradient
-            id="linear-gradient-3"
-            x1="915.96"
-            y1="617.83"
-            x2="927.98"
-            y2="891.86"
-            xlink:href="#linear-gradient"
-          />
-          <linearGradient
-            id="linear-gradient-4"
-            x1="914.02"
-            y1="617.91"
-            x2="926.04"
-            y2="891.94"
-            xlink:href="#linear-gradient"
-          />
-          <linearGradient
-            id="linear-gradient-5"
-            x1="912.07"
-            y1="618"
-            x2="924.08"
-            y2="892.03"
-            xlink:href="#linear-gradient"
-          />
-          <linearGradient
-            id="linear-gradient-6"
-            x1="910.13"
-            y1="618.08"
-            x2="922.15"
-            y2="892.11"
-            xlink:href="#linear-gradient"
-          />
-          <linearGradient
-            id="linear-gradient-7"
-            x1="908.2"
-            y1="618.17"
-            x2="920.21"
-            y2="892.2"
-            xlink:href="#linear-gradient"
-          />
-          <linearGradient
-            id="linear-gradient-8"
-            x1="906.26"
-            y1="618.25"
-            x2="918.28"
-            y2="892.28"
-            xlink:href="#linear-gradient"
-          />
-        </defs>
+
         <title>shapes</title>
         <g id="dotted-square" fill="#e1e2e2">
           <path
@@ -637,16 +568,11 @@
           stroke-width="4"
           stroke-dasharray="12.04 12.04"
         />
-        <g id="shape-moon" stroke="#fb8122">
-          <path
-            d="M729.08,592.53l21-13.48a56.86,56.86,0,1,0,95.76-61.33L867,504.24a81.86,81.86,0,0,1-137.87,88.29Z"
-            transform="translate(-346.54 -160.1)"
-            fill="#e1e2e2"
-          />
+
           <polygon
             id="star"
             fill="#fb8122"
             points="440.77 386.89 449.89 377.77 459.01 386.89 473.61 372.3 464.48 363.18 473.61 354.05 459.01 339.46 449.89 348.58 440.77 339.46 426.17 354.05 435.3 363.18 426.17 372.3 440.77 386.89"
           />
-        </g>
+
       </svg>

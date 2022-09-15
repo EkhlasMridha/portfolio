@@ -16,9 +16,12 @@
       margin-top: auto;
       margin-bottom: auto;
       font-size: 1.5em;
+      .greeting {
+        font-size: 2em;
+      }
       .myname {
         margin: 8px 0px;
-        border-bottom: 1px solid;
+        font-size: 1.6em;
       }
       h1 {
         margin-bottom: 0px;
@@ -44,7 +47,7 @@
       .brand-avatar {
         height: 150px;
         position: absolute;
-        left: 90px;
+        // left: 90px;
       }
     }
   }
@@ -69,11 +72,17 @@
   }
 }
 
-.typewriter-text {
-  // animation: typewriter 3s steps(16, end) infinite;
-  // overflow: hidden;
-  white-space: nowrap;
-  letter-spacing: 4px;
+@media screen and (max-width: 450px) {
+  .landing-page {
+    .landing-content {
+      .graphics-container {
+        max-width: 250px;
+        .brand-avatar {
+          height: 100px;
+        }
+      }
+    }
+  }
 }
 
 @keyframes typewriter {
