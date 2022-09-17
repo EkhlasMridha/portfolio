@@ -205,3 +205,22 @@
     top: unset;
   }
 }
+
+/** My works header */
+.myworks-header-container {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 14px 5px;
+  h2 {
+    margin-bottom: 12px;
+    letter-spacing: 4px;
+  }
+  .header-description {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: darken(theme.$secondary-color, 25%);
+  }
+}
