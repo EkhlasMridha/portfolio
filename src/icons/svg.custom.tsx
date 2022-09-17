@@ -7,6 +7,8 @@ import { ReactComponent as GithubIcon } from "../svgs/github.svg";
 import { ReactComponent as UpArrow } from "../svgs/scrollup.svg";
 import { ReactComponent as LeftArrow } from "../svgs/left-arrow.svg";
 import { ReactComponent as AvatarShape } from "../svgs/avatar-icon.svg";
+import { ReactComponent as LeftAngle } from "../svgs/left-slide.svg";
+import { ReactComponent as RightAngle } from "../svgs/right-slide.svg";
 
 export const UserFilled = (props: SVGProps<any>) => {
   return <User {...props} />;
@@ -38,4 +40,12 @@ export const LeftArrowIcon = (props: SVGProps<any>) => {
 
 export const AvatarIcon = (props: SVGProps<any>) => {
   return <AvatarShape {...props} />;
+};
+
+export const SliderLeft = (props: SVGProps<any>) => {
+  return <LeftAngle {...props} />;
+};
+
+export const SliderRight = (props: SVGProps<any>) => {
+  return <RightAngle {...props} />;
 };

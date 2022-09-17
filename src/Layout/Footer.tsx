@@ -8,6 +8,7 @@ import {
 import "./Footer.scss";
 
 export const Footer = (props: any) => {
+  let currenYear = new Date().getFullYear();
   return (
     <footer className="white-background app-footer flx flx-col app-footer">
       <FooterRound style={{ display: "block" }} />
@@ -38,6 +39,9 @@ export const Footer = (props: any) => {
             >
               <LinkedIn />
             </a>
+          </div>
+          <div className="copyright">
+            Copyright&copy;{currenYear} Ekhlas Ali Mridha All Rights Reserved
           </div>
         </div>
       </div>
