@@ -91,12 +91,19 @@
     padding: 0px 6px 8px 6px;
     .work-title {
       font-size: 2.5rem;
+      animation-duration: 0.8s;
+    }
+
+    .work-desc {
+      animation-duration: 0.5s;
+      animation-delay: 0.3s;
+      opacity: 0;
     }
 
     .detail-button-container {
       margin-top: 12px;
       border-top: 1px solid theme.$secondary-color;
-      div {
+      .btn {
         padding: 8px 12px;
         display: inline-block;
         background-color: theme.$secondary-color;
@@ -104,6 +111,8 @@
         font-size: 12px;
         border-radius: 0px 0px 25px 4px;
         transition: 0.3s ease-in-out;
+        border: none;
+        outline: none;
         &:hover {
           background-color: theme.$highlight-color;
         }
@@ -117,6 +126,36 @@
   width: 100%;
   position: absolute;
   top: 50%;
+}
+
+.work-next {
+  animation: 2s titlenext forwards;
+}
+
+.work-pre {
+  animation: 2s titlepre forwards;
+}
+
+@keyframes titlenext {
+  from {
+    transform: translate(0px, 2rem);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes titlepre {
+  from {
+    transform: translate(0px, -2rem);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
 }
 
 @keyframes lineanim {
