@@ -66,6 +66,12 @@
       align-items: center;
       display: flex;
       transition: all 0.3s ease-in-out;
+      border: none;
+      outline: none;
+      background: none;
+      &:focus {
+        outline: none;
+      }
       &:hover {
         background: theme.$secondary-color;
         color: theme.$primary-color;
@@ -88,7 +94,9 @@
     margin-right: auto;
     transition: 0.2s ease-in-out;
     flex: 1 1 auto;
+    width: 100%;
     padding: 0px 6px 8px 6px;
+    z-index: 10;
     .work-title {
       font-size: 2.5rem;
       animation-duration: 0.8s;
@@ -103,19 +111,24 @@
     .detail-button-container {
       margin-top: 12px;
       border-top: 1px solid theme.$secondary-color;
+      display: flex;
+      column-gap: 14px;
+      opacity: 0;
+      .work-type {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        color: darken(theme.$secondary-color, 25%);
+      }
       .btn {
-        padding: 8px 12px;
         display: inline-block;
         background-color: theme.$secondary-color;
         color: theme.$primary-color;
         font-size: 12px;
         border-radius: 0px 0px 25px 4px;
-        transition: 0.3s ease-in-out;
-        border: none;
-        outline: none;
-        &:hover {
-          background-color: theme.$highlight-color;
-        }
+        overflow: hidden;
+        position: relative;
+        line-height: 14px;
       }
     }
   }
@@ -126,14 +139,34 @@
   width: 100%;
   position: absolute;
   top: 50%;
+  padding: 10px 0px;
+  max-height: 200px;
 }
 
 .work-next {
-  animation: 2s titlenext forwards;
+  animation-name: titlenext;
+  animation-fill-mode: forwards;
 }
 
 .work-pre {
-  animation: 2s titlepre forwards;
+  animation-name: titlepre;
+  animation-fill-mode: forwards;
+}
+
+.detail-animate {
+  animation: 0.6s detailanim forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes detailanim {
+  from {
+    transform: translate(2rem, 0px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px, 0px);
+    opacity: 2;
+  }
 }
 
 @keyframes titlenext {
@@ -158,11 +191,17 @@
   }
 }
 
-@keyframes lineanim {
-  from {
-    width: 0px;
+@media screen and (max-width: 990px) {
+  .workpage-container {
+    .workitem-container {
+      flex-direction: column;
+    }
   }
-  to {
-    width: 100px;
+
+  .navigation-sliders {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    top: unset;
   }
 }

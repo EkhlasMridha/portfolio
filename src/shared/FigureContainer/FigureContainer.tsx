@@ -1,4 +1,4 @@
-import { HtmlHTMLAttributes, ReactNode } from "react";
+import { HtmlHTMLAttributes } from "react";
 import "./FigureContainer.scss";
 
 export interface FigureContainerProps extends HtmlHTMLAttributes<any> {

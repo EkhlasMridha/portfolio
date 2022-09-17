@@ -1,6 +1,9 @@
 import { LeftArrowIcon } from "../../icons/svg.custom";
 import "./DetailLayout.scss";
-import { FigureContainer, FigureItems } from "../../shared/FigureContainer";
+import {
+  FigureContainer,
+  FigureItems,
+} from "../../shared/FigureContainer/FigureContainer";
 import { Footer } from "../../Layout/Footer";
 import { useNavigate } from "react-router-dom";
 

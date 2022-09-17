@@ -1,10 +1,12 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { SliderLeft, SliderRight } from "../../icons/svg.custom";
+import { SlideNavigator } from "../../shared/Buttons/SlideNavigator/SildeNavigator";
 import "./Works.scss";
 
 export const Works = (props: any) => {
   let slideIndex = 1;
+  let navigate = useNavigate();
 
   useEffect(() => {
     showSlides(slideIndex);
@@ -13,10 +15,6 @@ export const Works = (props: any) => {
   function plusSlides(direction: any) {
     showSlides((slideIndex += direction), direction);
   }
-
-  // function currentSlide(n: any) {
-  //   showSlides((slideIndex = n));
-  // }
 
   function showSlides(n: any, direction: number = 1) {
     let i;
@@ -53,6 +51,10 @@ export const Works = (props: any) => {
     title[0].classList.add(direction > 0 ? "work-next" : "work-pre");
   }
 
+  const onNavigate = (path: any) => {
+    navigate(path);
+  };
+
   return (
     <section
       key={"works"}
@@ -62,54 +64,76 @@ export const Works = (props: any) => {
       <div className="workpage-content padding-side-20">
         <div className="flx row workitem-container">
           <div className="work-item ">
-            <h2 className="primary-textcolor work-title uppercase">
+            <h2 className="primary-textcolor work-title uppercase cursor-text">
               Event Ticketing
             </h2>
-            <div className="primary-textcolor work-desc">
+            <div className="primary-textcolor work-desc cursor-text">
               Ticketing website with admin dashboard to manage and sell tickets
               of a created event.
             </div>
-            <div className="detail-button-container">
-              <button className="cursor-pointer btn">View Details</button>
+            <div className="detail-button-container detail-animate">
+              <SlideNavigator
+                className="cursor-pointer btn"
+                onClick={() => onNavigate("event-ticket")}
+              >
+                View Details
+              </SlideNavigator>
+              <div className="work-type">Website Development</div>
             </div>
           </div>
 
           <div className="work-item ">
-            <h2 className="primary-textcolor work-title uppercase">Booky</h2>
-            <div className="work-desc">
+            <h2 className="primary-textcolor work-title uppercase cursor-text">
+              Booky
+            </h2>
+            <div className="work-desc cursor-text">
               A simple hotel booking system to manage bookings of a hotel.
             </div>
-            <div className="detail-button-container">
-              <button className="cursor-pointer btn">View Details</button>
+            <div className="detail-button-container detail-animate">
+              <SlideNavigator
+                className="cursor-pointer btn"
+                onClick={() => onNavigate("booky")}
+              >
+                View Details
+              </SlideNavigator>
+              <div className="work-type">Website Development</div>
             </div>
           </div>
 
           <div className="work-item ">
-            <h2 className="primary-textcolor work-title uppercase">Moo-In</h2>
-            <div className="work-desc">
+            <h2 className="primary-textcolor work-title uppercase cursor-text">
+              Moo-In
+            </h2>
+            <div className="work-desc cursor-text">
               Restaurant order management system to take customer orders, print
               envoice and take payment.
             </div>
-            <div className="detail-button-container">
-              <button className="cursor-pointer btn">View Details</button>
+            <div className="detail-button-container detail-animate">
+              <SlideNavigator
+                className="cursor-pointer btn"
+                onClick={() => onNavigate("mooin")}
+              >
+                View Details
+              </SlideNavigator>
+              <div className="work-type">Website Development</div>
             </div>
           </div>
           <div className="navigation-sliders flx flx-row">
-            <div
-              className="slider-container primary-textcolor cursor-pointer"
-              onClick={() => plusSlides(-1)}
-            >
-              <div className="slider-arrow">
+            <div className="slider-container ">
+              <button
+                className="slider-arrow primary-textcolor cursor-pointer"
+                onClick={() => plusSlides(-1)}
+              >
                 <SliderLeft height={30} />
-              </div>
+              </button>
             </div>
-            <div
-              className=" slider-container primary-textcolor cursor-pointer"
-              onClick={() => plusSlides(1)}
-            >
-              <div className="slider-arrow">
+            <div className="slider-container">
+              <button
+                className="slider-arrow primary-textcolor cursor-pointer"
+                onClick={() => plusSlides(1)}
+              >
                 <SliderRight height={30} />
-              </div>
+              </button>
             </div>
           </div>
         </div>

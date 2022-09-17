@@ -2,7 +2,10 @@ import { createBrowserHistory } from "@remix-run/router";
 import { useNavigate } from "react-router-dom";
 import { LeftArrowIcon } from "../../icons/svg.custom";
 import { Footer } from "../../Layout/Footer";
-import { FigureContainer, FigureItems } from "../../shared/FigureContainer";
+import {
+  FigureContainer,
+  FigureItems,
+} from "../../shared/FigureContainer/FigureContainer";
 import "./DetailLayout.scss";
 
 const figureItems1: FigureItems = [
