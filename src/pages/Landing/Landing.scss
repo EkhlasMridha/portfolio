@@ -16,6 +16,7 @@
       margin-top: auto;
       margin-bottom: auto;
       font-size: 1.5em;
+
       .greeting {
         font-size: 2em;
       }
@@ -53,6 +54,14 @@
   }
 }
 
+.work-type {
+  opacity: 0;
+  transition: 1s ease-in;
+  animation: 1s worktypeanim forwards;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
 @media screen and (max-width: 750px) {
   .landing-content {
     flex-direction: column;
@@ -85,12 +94,14 @@
   }
 }
 
-@keyframes typewriter {
+@keyframes worktypeanim {
   from {
-    width: 0;
+    opacity: 0;
+    transform: translate(-5px, 0px);
   }
   to {
-    width: 290px;
+    opacity: 1;
+    transform: translate(0px, 0px);
   }
 }
 
