@@ -86,22 +86,41 @@
   justify-content: flex-end;
   margin-top: 14px;
   button {
-    background: theme.$highlight-color;
+    position: relative;
+    background: theme.$primary-color;
     border: none;
-    padding: 8px 12px;
-    min-width: 100px;
-    border-radius: 2px;
-    // cursor: pointer;
-    box-shadow: 1px 1px 4px 0px #242424;
-    transition-duration: 0.4s;
-    -webkit-transition-duration: 0.4s;
+    font-weight: bold;
+    color: theme.$secondary-color;
+    overflow: hidden;
+    z-index: 1;
+    padding: 8px 18px;
+    border: 2px solid theme.$primary-color;
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 500%;
+      height: 1000%;
+      background: theme.$highlight-color;
+      z-index: -1;
+      transform-origin: 0% 0%;
+      transform: translateX(-20%) translateY(-10%) rotate(45deg);
+      transition: transform 0.4s ease-in-out;
+    }
 
     &:focus {
       outline: none;
     }
     &:hover {
-      transition-duration: 0.1s;
-      background: darken(theme.$highlight-color, 10%);
+      color: theme.$primary-color;
+      &::after {
+        transform: translateY(-45%) translateX(-25px) rotate(45deg);
+      }
     }
   }
 }
@@ -118,6 +137,7 @@
 .contact-mail {
   margin-top: 2.5rem;
   display: inline-block;
+  transition: 0.2s ease-in-out;
   &:hover {
     color: theme.$highlight-color;
   }

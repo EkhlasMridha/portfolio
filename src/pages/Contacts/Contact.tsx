@@ -1,4 +1,4 @@
-import { MailIFilled, UserFilled } from "../../icons/svg.custom";
+import { MailIFilled, MailSent, UserFilled } from "../../icons/svg.custom";
 import "./Contact.scss";
 
 export const Contact = (props: any) => {
@@ -53,6 +53,7 @@ export const Contact = (props: any) => {
           <div className="submit-button">
             <button type="submit" className="cursor-pointer">
               Send
+              <MailSent height={15} />
             </button>
           </div>
         </div>

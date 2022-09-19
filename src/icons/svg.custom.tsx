@@ -10,6 +10,7 @@ import { ReactComponent as AvatarShape } from "../svgs/avatar-icon.svg";
 import { ReactComponent as LeftAngle } from "../svgs/left-slide.svg";
 import { ReactComponent as RightAngle } from "../svgs/right-slide.svg";
 import { ReactComponent as Contents } from "../svgs/contents.svg";
+import { ReactComponent as SendMail } from "../svgs/send-mail.svg";
 
 export const UserFilled = (props: SVGProps<any>) => {
   return <User {...props} />;
@@ -53,4 +54,8 @@ export const SliderRight = (props: SVGProps<any>) => {
 
 export const LandingElements = (props: SVGProps<any>) => {
   return <Contents {...props} />;
+};
+
+export const MailSent = (props: SVGProps<any>) => {
+  return <SendMail {...props} />;
 };
