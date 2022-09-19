@@ -47,7 +47,7 @@ export const Contact = (props: any) => {
           <div className="input-item">
             <label>Message</label>
             <div className="input-element">
-              <textarea />
+              <textarea id="message" />
             </div>
           </div>
           <div className="submit-button">
