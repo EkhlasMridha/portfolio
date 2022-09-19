@@ -1,4 +1,5 @@
 import { useEffect, useLayoutEffect, useMemo, useState } from "react";
+import { LandingElements } from "../../icons/svg.custom";
 import "./Landing.scss";
 import { LandingAvatar, SvgLanding } from "./SvgLanding";
 
@@ -48,7 +49,7 @@ export const Landing = (props: any) => {
         </div>
         <div className="graphics-container justify-center" key={"graphics"}>
           <LandingAvatar className="brand-avatar" />
-          <SvgLanding />
+          <LandingElements />
         </div>
       </div>
     </section>

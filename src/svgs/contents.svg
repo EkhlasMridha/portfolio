@@ -1,0 +1,55 @@
+<svg
+  id="Layer_1"
+  data-name="Layer 1"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 801.16 736.95"
+>
+  <title>contents</title>
+  <g opacity="0.6">
+    <circle
+      id="future-loader-1"
+      cx="630"
+      cy="171"
+      r="153.5"
+      fill="none"
+      stroke="#fb8122"
+      stroke-miterlimit="10"
+      stroke-width="35"
+      stroke-dasharray="160.75 0 0 0 0.01 160.73"
+    />
+  </g>
+  <path
+    id="big-screen-back"
+    d="M419,741.76l-307.52-26a53.28,53.28,0,0,1-48.3-60.31L126.08,196a53.28,53.28,0,0,1,46.18-45.64l301.85-37.73a53.27,53.27,0,0,1,59.56,58.66l-57.2,523.14A53.28,53.28,0,0,1,419,741.76Z"
+    transform="translate(0.16 -5)"
+    fill="#e1e2e2"
+    opacity="0.35"
+  />
+  <path
+    id="big-screen-front"
+    d="M356.16,697.9l-307.52-26A53.28,53.28,0,0,1,.34,611.6L63.21,152.17a53.29,53.29,0,0,1,46.18-45.64L411.24,68.8a53.27,53.27,0,0,1,59.57,58.65L413.61,650.6A53.29,53.29,0,0,1,356.16,697.9Z"
+    transform="translate(0.16 -5)"
+    fill="#e1e2e2"
+    opacity="0.5"
+  />
+  <rect
+    id="square-scree-1"
+    x="533.85"
+    y="476.51"
+    width="157.9"
+    height="157.9"
+    rx="22.74"
+    fill="#e1e2e2"
+    opacity="0.5"
+  />
+  <rect
+
+    x="551.39"
+    y="460.42"
+    width="157.9"
+    height="157.9"
+    rx="22.74"
+    fill="#fb8122"
+    opacity="0.49"
+  />
+</svg>

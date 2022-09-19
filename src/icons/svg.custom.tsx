@@ -9,6 +9,7 @@ import { ReactComponent as LeftArrow } from "../svgs/left-arrow.svg";
 import { ReactComponent as AvatarShape } from "../svgs/avatar-icon.svg";
 import { ReactComponent as LeftAngle } from "../svgs/left-slide.svg";
 import { ReactComponent as RightAngle } from "../svgs/right-slide.svg";
+import { ReactComponent as Contents } from "../svgs/contents.svg";
 
 export const UserFilled = (props: SVGProps<any>) => {
   return <User {...props} />;
@@ -48,4 +49,8 @@ export const SliderLeft = (props: SVGProps<any>) => {
 
 export const SliderRight = (props: SVGProps<any>) => {
   return <RightAngle {...props} />;
+};
+
+export const LandingElements = (props: SVGProps<any>) => {
+  return <Contents {...props} />;
 };

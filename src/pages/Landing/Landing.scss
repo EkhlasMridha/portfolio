@@ -56,10 +56,15 @@
 
 .work-type {
   opacity: 0;
-  transition: 1s ease-in;
   animation: 1s worktypeanim forwards;
   font-weight: 700;
   letter-spacing: 3px;
+}
+
+@media screen and (max-width: 550px) {
+  .work-type {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -106,36 +111,51 @@
 }
 
 /* ====== svg animation style ===== */
-#dotted-square,
-#cirlce-line,
-#geo-wave,
-#star {
+
+#square-scree-1,
+#square-scree-2 {
   animation: floatY 1s infinite ease-in-out alternate;
 }
 
-#dotted-square {
+#big-screen-front {
+  animation: bigScreenFront 1s infinite ease-in-out alternate;
+  animation-delay: 0.5s;
+}
+
+#big-screen-back {
+  animation: bigScreenBack 1s infinite ease-in-out alternate;
+}
+
+#square-scree-1 {
+  animation-delay: 0.5s;
+}
+
+#square-scree-2 {
   animation-delay: 0.1s;
 }
-#geo-wave,
-#star {
-  animation-delay: 0.4s;
-}
 
-#cirlce-line {
-  animation-delay: 0.3s;
-}
-
-#angle-brace {
-  animation: floatX 1s infinite ease-in-out alternate;
-  animation-delay: 0.8s;
-}
-
-#dot-circle {
+#future-loader-1 {
   animation-name: spinR;
-  animation-duration: 40000ms;
+  animation-duration: 15000ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  transform-origin: 400px 150px;
+  transform-origin: 630px 171px;
+  transform: translateZ(0);
+}
+
+@keyframes bigScreenFront {
+  100% {
+    transform: translate(10px, 10px);
+  }
+}
+
+@keyframes bigScreenBack {
+  0% {
+    transform: translate(-5px, -10px);
+  }
+  100% {
+    transform: translate(0px, -5px);
+  }
 }
 
 @keyframes floatX {
