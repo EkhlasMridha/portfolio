@@ -1,5 +1,6 @@
 import React, { lazy } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { PageLoader } from "./shared/PageLoader/PageLoader";
 // import EventTicketing from "./pages/WorkDetails/EvetnTicketing";
 
 const RootPage = lazy(() => import("./pages/RootPage"));
@@ -30,7 +31,7 @@ function App() {
   ]);
 
   return (
-    <React.Suspense fallback={"Loading commponent"}>
+    <React.Suspense fallback={<PageLoader />}>
       <RouterProvider router={routes} />
     </React.Suspense>
   );
