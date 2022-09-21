@@ -1,12 +1,12 @@
-import { useEffect, useLayoutEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { LandingElements } from "../../icons/svg.custom";
 import "./Landing.scss";
-import { LandingAvatar, SvgLanding } from "./SvgLanding";
+import { LandingAvatar } from "./SvgLanding";
 
 export const Landing = (props: any) => {
   const allTexts: string[] = ["Web Developer", "UI/UX Designer"];
   const [index, setIndex] = useState<number>(0);
-  let count = 0;
+  // let count = 0;
   var suffleWorkType = (containerId: string) => {
     let workType = document.getElementsByClassName(
       containerId
