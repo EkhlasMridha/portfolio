@@ -22,8 +22,6 @@ export const Landing = (props: any) => {
   }, []);
 
   useEffect(() => {
-    console.log("Aow");
-
     setTimeout(() => {
       suffleWorkType("work-type");
       setIndex((pre) => {

@@ -1,7 +1,78 @@
+import { useState } from "react";
 import { MailIFilled, MailSent, UserFilled } from "../../icons/svg.custom";
 import "./Contact.scss";
+import { ContactForm } from "./ContactForm";
+
+interface ValidationValueLabel {
+  isValid: boolean;
+  message: string;
+}
+
+interface Validation {
+  name?: ValidationValueLabel;
+  email?: ValidationValueLabel;
+  message?: ValidationValueLabel;
+}
+
+function validatePayload(data: any) {
+  let status: Validation = {};
+  if ((data?.name?.length ?? 0) === 0) {
+    status = {
+      ...status,
+      name: {
+        isValid: false,
+        message: "Name is required.",
+      },
+    };
+  }
+  console.log("After name: ", status);
+  if ((data?.email?.length ?? 0) === 0) {
+    status = {
+      ...status,
+      email: {
+        isValid: false,
+        message: "Please enter your mail address.",
+      },
+    };
+  }
+  console.log("After mail: ", status);
+  if ((data?.message?.length ?? 0) === 0) {
+    status = {
+      ...status,
+      message: {
+        isValid: false,
+        message: "Please enter your message.",
+      },
+    };
+  }
+  console.log("After message: ", status);
+  return status;
+}
 
 export const Contact = (props: any) => {
+  const [validationState, setValidation] = useState<Validation>();
+
+  const onSubmit = (e: any) => {
+    e.preventDefault();
+
+    const { name, email, message } = e.target.elements;
+
+    let payload = {
+      name: name?.value,
+      email: email?.value,
+      message: message?.value,
+    };
+
+    let validation = validatePayload(payload);
+
+    if ((validation ?? "") !== "") {
+      console.log("Validation: ", validation);
+      setValidation(validation);
+      return;
+    }
+    console.log(payload);
+  };
+
   return (
     <section
       key={"contact"}
@@ -10,12 +81,11 @@ export const Contact = (props: any) => {
     >
       <div className="section-1 half-section  primary-background primary-textcolor">
         <div className="padding-side-20 content-container contact-text-section">
-          {/* <h1 className="text-center">Let's Talk</h1> */}
           <div className="uppercase highlight-color contact-title">Contact</div>
           <div className="question">Need a solution to your problem?</div>
           <div className="q-detail">
-            Be ready to enter the digital world and tell me about your idea to
-            get your dream application.
+            Put on your reading glass and tell me about your idea to bring it
+            into reality.
           </div>
           <div className="contact-mail cursor-pointer">
             <MailIFilled height={"14px"} />
@@ -24,39 +94,7 @@ export const Contact = (props: any) => {
         </div>
       </div>
       <div className="section-1 half-section secondary-background ">
-        <div className="section-2-content padding-side-20">
-          <div className="input-item">
-            <label>Name</label>
-            <div className="input-element">
-              <div className="addon-before">
-                <UserFilled height={"14px"} />
-              </div>
-
-              <input name="name" id="name" />
-            </div>
-          </div>
-          <div className="input-item">
-            <label>Email</label>
-            <div className="input-element">
-              <div className="addon-before">
-                <MailIFilled height="12px" />
-              </div>
-              <input name="email" id="email" type="email" />
-            </div>
-          </div>
-          <div className="input-item">
-            <label>Message</label>
-            <div className="input-element">
-              <textarea id="message" />
-            </div>
-          </div>
-          <div className="submit-button">
-            <button type="submit" className="cursor-pointer">
-              Send
-              <MailSent height={15} />
-            </button>
-          </div>
-        </div>
+        <ContactForm />
       </div>
     </section>
   );

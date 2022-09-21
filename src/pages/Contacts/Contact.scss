@@ -82,6 +82,17 @@
   }
 }
 
+.error-input {
+  textarea,
+  input {
+    outline: 1px solid theme.$error-color;
+    box-shadow: 0px 0px 5px 0px rgba(theme.$error-color, 0.6);
+    &:focus {
+      outline: 1px solid theme.$error-color;
+    }
+  }
+}
+
 .submit-button {
   display: flex;
   justify-content: flex-end;
@@ -128,6 +139,24 @@
       box-shadow: 0px 0px 4px 0px rgba(theme.$primary-color, 0.6);
       scale: (0.95);
     }
+  }
+}
+
+.form-error {
+  position: absolute;
+  font-size: 10px;
+  bottom: -14px;
+  left: 5px;
+  color: theme.$error-color;
+  animation: erroranimate 1s reverse;
+}
+
+@keyframes erroranimate {
+  from {
+    transform: translate(0px, -10x);
+  }
+  to {
+    transform: translate(0px, 0px);
   }
 }
 
