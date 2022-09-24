@@ -64,7 +64,6 @@ export const ContactForm = (props: any) => {
       },
       body: JSON.stringify(data),
     }).then((res) => {
-      console.log(res.json());
       loadingSender(false);
     });
   }

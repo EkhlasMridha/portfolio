@@ -189,14 +189,16 @@
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding: 4px 0px;
-  animation: sending 1s ease-in;
+  animation: sending 0.4s ease-in;
 }
 
 @keyframes sending {
   from {
-    transform: translate(-10px, 0px);
+    opacity: 0;
+    transform: translate(0px, 25px);
   }
   to {
+    opacity: 1;
     transform: translate(0px, 0px);
   }
 }
