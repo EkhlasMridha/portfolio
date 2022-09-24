@@ -1,5 +1,11 @@
-import { MailIFilled, MailSent, UserFilled } from "../../icons/svg.custom";
+import {
+  MailIFilled,
+  MailSent,
+  PuffLoader,
+  UserFilled,
+} from "../../icons/svg.custom";
 import { useForm } from "../../shared/FormHook/useForm";
+export const { baseURL } = window as any;
 
 interface Contact {
   name: string;
@@ -36,8 +42,31 @@ export const ContactForm = (props: any) => {
     },
   });
 
+  const loadingSender = (state: boolean = true) => {
+    let submitButton = document.getElementById("btn_submit");
+
+    let sendingSpinner = document.getElementById("anm_sending");
+    if (state) {
+      submitButton?.classList.add("hidden");
+      sendingSpinner?.classList.remove("hidden");
+    } else {
+      submitButton?.classList.remove("hidden");
+      sendingSpinner?.classList.add("hidden");
+    }
+  };
+
   function onSubmit(data: Contact) {
-    console.log("Form data: ", data);
+    loadingSender();
+    fetch(baseURL + "message", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then((res) => {
+      console.log(res.json());
+      loadingSender(false);
+    });
   }
 
   return (
@@ -80,10 +109,14 @@ export const ContactForm = (props: any) => {
         </div>
       </div>
       <div className="submit-button">
-        <button type="submit" className="cursor-pointer">
+        <button id="btn_submit" type="submit" className="cursor-pointer">
           Send
           <MailSent height={15} />
         </button>
+        <div id="anm_sending" className="flx text-bold sending-button hidden">
+          <PuffLoader height={25} width={35} />
+          <span>Sending...</span>
+        </div>
       </div>
     </form>
   );

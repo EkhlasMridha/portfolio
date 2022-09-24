@@ -11,6 +11,7 @@ import { ReactComponent as LeftAngle } from "../svgs/left-slide.svg";
 import { ReactComponent as RightAngle } from "../svgs/right-slide.svg";
 import { ReactComponent as Contents } from "../svgs/contents.svg";
 import { ReactComponent as SendMail } from "../svgs/send-mail.svg";
+import { ReactComponent as PuffAnimated } from "../svgs/puff.svg";
 
 export const UserFilled = (props: SVGProps<any>) => {
   return <User {...props} />;
@@ -58,4 +59,8 @@ export const LandingElements = (props: SVGProps<any>) => {
 
 export const MailSent = (props: SVGProps<any>) => {
   return <SendMail {...props} />;
+};
+
+export const PuffLoader = (props: SVGProps<any>) => {
+  return <PuffAnimated {...props} />;
 };
