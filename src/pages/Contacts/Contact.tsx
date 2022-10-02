@@ -11,9 +11,13 @@ export const Contact = (props: any) => {
     >
       <div className="section-1 half-section  primary-background primary-textcolor">
         <div className="padding-side-20 content-container contact-text-section">
-          <div className="uppercase highlight-color contact-title">Contact</div>
-          <div className="question">Need a solution to your problem?</div>
-          <div className="q-detail">
+          <div className="uppercase highlight-color contact-title cursor-text">
+            Contact
+          </div>
+          <div className="question cursor-text">
+            Need a solution to your problem?
+          </div>
+          <div className="q-detail cursor-text">
             Put on your reading glass and send me your idea to bring it into
             reality.
           </div>

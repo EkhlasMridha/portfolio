@@ -8,7 +8,7 @@ export const About = (props: any) => {
       id="about"
     >
       <div className="about-content content-container padding-side-20">
-        <h2>ABOUT</h2>
+        <h2 className="cursor-text">ABOUT</h2>
         <p>
           I am a full stack web developer skilled with various type of web
           development front-end and backend frameworks and technologies.{" "}

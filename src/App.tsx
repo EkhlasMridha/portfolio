@@ -1,7 +1,6 @@
 import React, { lazy } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { PageLoader } from "./shared/PageLoader/PageLoader";
-// import EventTicketing from "./pages/WorkDetails/EvetnTicketing";
 
 const RootPage = lazy(() => import("./pages/RootPage"));
 const EventTicketing = lazy(() => import("./pages/WorkDetails/EvetnTicketing"));
