@@ -15,7 +15,8 @@ export const RootlineToastContainer = (props: RootlineToastContainerProps) => {
 
   useMemo(() => {
     setToasts((pre) => {
-      return (pre ?? []).concat(toasts ?? { text: "" });
+      let list = (pre ?? []).concat(toasts ?? { text: "" });
+      return list;
     });
   }, [toasts]);
 
@@ -28,6 +29,15 @@ export const RootlineToastContainer = (props: RootlineToastContainerProps) => {
     }
   }, [toastList]);
 
+  const closeToast = (index: string) => {
+    let toastId = Number(index);
+    setToasts((pre) => {
+      let cpy = [...pre];
+      cpy.splice(toastId, 1);
+      return cpy;
+    });
+  };
+
   return (
     <div {...restProps} id="rootline_toast_container" className={combinedClass}>
       {toastList?.map((item, index) => (
@@ -35,6 +45,8 @@ export const RootlineToastContainer = (props: RootlineToastContainerProps) => {
           key={index}
           text={item?.text}
           style={{ zIndex: index + 1 }}
+          id={"toast-" + index}
+          close={closeToast}
         />
       ))}
     </div>

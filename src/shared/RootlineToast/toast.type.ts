@@ -6,8 +6,9 @@ export interface RootlineToastContainerProps {
 
 export interface RootlineToastProps extends HtmlHTMLAttributes<any> {
   text: ReactNode | string;
+  close?: (index: string) => void;
 }
-export interface ToasterConfigType extends RootlineToastProps {
+export interface ToasterConfigType extends Omit<RootlineToastProps, "close"> {
   container?: HtmlHTMLAttributes<any>;
 }
 export interface ToasterPropsType {

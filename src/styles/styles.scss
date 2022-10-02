@@ -114,7 +114,7 @@ p {
 
 a,
 .cursor-pointer {
-  cursor: url("../svgs/cursor-hand.svg"), pointer;
+  cursor: url("../svgs/cursor-hand.svg") 10 0, pointer;
 }
 
 .top-0 {
