@@ -24,7 +24,7 @@ export const RootlineToastContainer = (props: RootlineToastContainerProps) => {
     if (toastList.length > 0) {
       const timer = setTimeout(() => {
         setToasts((pre) => pre.slice(1));
-      }, 2500);
+      }, 3000);
       return () => clearTimeout(timer);
     }
   }, [toastList]);
