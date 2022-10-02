@@ -5,6 +5,7 @@ import {
   UserFilled,
 } from "../../icons/svg.custom";
 import { useForm } from "../../shared/FormHook/useForm";
+import toaster from "../../shared/RootlineToast";
 export const { baseURL } = window as any;
 
 interface Contact {
@@ -65,8 +66,15 @@ export const ContactForm = (props: any) => {
       body: JSON.stringify(data),
     }).then((res) => {
       loadingSender(false);
+      showToaster();
     });
   }
+
+  const showToaster = () => {
+    toaster.show({
+      text: "Message has been sent successfully",
+    });
+  };
 
   return (
     <form onSubmit={handleSubmit} className="section-2-content padding-side-20">
@@ -117,6 +125,9 @@ export const ContactForm = (props: any) => {
           <span>Sending...</span>
         </div>
       </div>
+      <button type="button" onClick={showToaster}>
+        Test 2
+      </button>
     </form>
   );
 };

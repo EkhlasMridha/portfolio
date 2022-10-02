@@ -31,9 +31,11 @@ function App() {
   ]);
 
   return (
-    <React.Suspense fallback={<PageLoader />}>
-      <RouterProvider router={routes} />
-    </React.Suspense>
+    <>
+      <React.Suspense fallback={<PageLoader />}>
+        <RouterProvider router={routes} />
+      </React.Suspense>
+    </>
   );
 }
 
