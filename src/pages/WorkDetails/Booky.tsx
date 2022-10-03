@@ -1,11 +1,10 @@
-import { createBrowserHistory } from "@remix-run/router";
 import { useNavigate } from "react-router-dom";
-import { LeftArrowIcon } from "../../icons/svg.custom";
 import { Footer } from "../../Layout/Footer";
 import {
   FigureContainer,
   FigureItems,
 } from "../../shared/FigureContainer/FigureContainer";
+import { BlogBackButton } from "./BlogBackButton";
 import "./DetailLayout.scss";
 
 const figureItems1: FigureItems = [
@@ -23,12 +22,14 @@ const Booky = (props: any) => {
   const navigate = useNavigate();
   return (
     <>
-      <a
-        className="back-button cursor-pointer secondary-textcolor"
+      {/* <a
+        className="back-button cursor-pointer primary-textcolor"
         onClick={() => navigate(-1)}
       >
-        <LeftArrowIcon height={20} />
-      </a>
+        <LeftArrowIcon className="left-arrow" height={20} />
+        <span>Back</span>
+      </a> */}
+      <BlogBackButton onClick={() => navigate(-1)} />
       <div className="detail-container">
         <h1 className="text-center cursor-text">Booky</h1>
         <p>

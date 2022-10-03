@@ -1,4 +1,3 @@
-import { LeftArrowIcon } from "../../icons/svg.custom";
 import "./DetailLayout.scss";
 import {
   FigureContainer,
@@ -6,6 +5,7 @@ import {
 } from "../../shared/FigureContainer/FigureContainer";
 import { Footer } from "../../Layout/Footer";
 import { useNavigate } from "react-router-dom";
+import { BlogBackButton } from "./BlogBackButton";
 
 const figureItems1: FigureItems = [
   {
@@ -40,12 +40,7 @@ const EventTicketing = (props: any) => {
   const navigate = useNavigate();
   return (
     <>
-      <a
-        className="back-button cursor-pointer secondary-textcolor"
-        onClick={() => navigate(-1)}
-      >
-        <LeftArrowIcon height={20} />
-      </a>
+      <BlogBackButton onClick={() => navigate(-1)} />
       <div className="detail-container">
         <h1 className="text-center cursor-text">Event Ticketing</h1>
         <p>

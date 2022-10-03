@@ -1,0 +1,23 @@
+@use "../../styles/colors" as theme;
+
+.back-button {
+  position: fixed;
+  top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+  background: theme.$primary-color;
+  border-radius: 0px 45px 4px 0px;
+  width: 80px;
+  padding: 8px 10px;
+  z-index: 10;
+  box-shadow: 0px 0px 20px 0px #2424244b;
+  .left-arrow {
+    transform: scale(0.7);
+  }
+  &:hover {
+    background: lighten(theme.$primary-color, 15%);
+    color: lighten(theme.$secondary-color, 30%);
+  }
+}

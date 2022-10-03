@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { LeftArrowIcon } from "../../icons/svg.custom";
 import { Footer } from "../../Layout/Footer";
+import { BlogBackButton } from "./BlogBackButton";
 import "./DetailLayout.scss";
 
 const MooIn = (props: any) => {
@@ -8,12 +8,7 @@ const MooIn = (props: any) => {
 
   return (
     <>
-      <a
-        className="back-button cursor-pointer secondary-textcolor"
-        onClick={() => navigate(-1)}
-      >
-        <LeftArrowIcon height={20} />
-      </a>
+      <BlogBackButton onClick={() => navigate(-1)} />
       <div className="detail-container" style={{ height: "100vh" }}>
         <h1 className="text-center cursor-text">Moo-In</h1>
         <p>
