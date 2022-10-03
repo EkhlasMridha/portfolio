@@ -43,7 +43,7 @@ export const Landing = (props: any) => {
           </h1>
           <h1 className="myname uppercase">Ekhlas Ali Mridha</h1>
           <div className="work-type highlight-lighten">Web Developer</div>
-          <div className="work-type highlight-lighten">UI/UX Designer</div>
+          <div className="work-type highlight-lighten">Web Designer</div>
         </div>
         <div className="graphics-container justify-center" key={"graphics"}>
           <LandingAvatar className="brand-avatar" />
