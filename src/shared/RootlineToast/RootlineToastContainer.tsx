@@ -20,14 +20,14 @@ export const RootlineToastContainer = (props: RootlineToastContainerProps) => {
     });
   }, [toasts]);
 
-  // useEffect(() => {
-  //   if (toastList.length > 0) {
-  //     const timer = setTimeout(() => {
-  //       setToasts((pre) => pre.slice(1));
-  //     }, 3000);
-  //     return () => clearTimeout(timer);
-  //   }
-  // }, [toastList]);
+  useEffect(() => {
+    if (toastList.length > 0) {
+      const timer = setTimeout(() => {
+        setToasts((pre) => pre.slice(1));
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [toastList]);
 
   const closeToast = (index: string) => {
     let toastId = Number(index);
