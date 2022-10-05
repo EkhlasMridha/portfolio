@@ -30,7 +30,9 @@ export const useForm = <T extends Record<keyof T, any> = {}>(
     e.preventDefault();
 
     const isValid = validateFiled(data);
-    if (!isValid) return;
+    console.log("valid: ", isValid);
+    if ((isValid ?? "") !== "" && isValid?.includes(false)) return;
+    // if (!isValid) return;
 
     setErrors({});
 
@@ -75,10 +77,11 @@ export const useForm = <T extends Record<keyof T, any> = {}>(
 
   function validateFiled(formData: T) {
     if (options?.validations) {
-      let valid = true;
+      let valid: boolean[] = [];
       for (const key in options?.validations) {
         const value = formData[key];
-        valid = validateSingleField(key, value);
+        let result = validateSingleField(key, value);
+        valid.push(result);
       }
 
       return valid;
