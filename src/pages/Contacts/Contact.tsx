@@ -14,12 +14,9 @@ export const Contact = (props: any) => {
           <div className="uppercase highlight-color contact-title cursor-text">
             Contact
           </div>
-          <div className="question cursor-text">
-            Need a solution to your problem?
-          </div>
+          <div className="question cursor-text">Want to reach out to me?</div>
           <div className="q-detail cursor-text">
-            Put on your reading glass and send me your idea to bring it into
-            reality.
+            Put on your glass and send me a message with the topic to discuss.
           </div>
           <div className="contact-mail cursor-pointer">
             <MailIFilled height={"14px"} />

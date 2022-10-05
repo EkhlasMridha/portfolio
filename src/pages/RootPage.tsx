@@ -8,7 +8,7 @@ import { Works } from "./Works/Works";
 
 const RootPage = () => {
   useEffect(() => {
-    let content = document.querySelector(".about-container");
+    let content = document.querySelector(".about-content");
     if ((content ?? "") !== "") {
       obServeAndAnimateAbout(content as Element);
     }
@@ -29,7 +29,7 @@ const RootPage = () => {
           aboutHeader.classList.add("animate-about-header");
           return; // if we added the class, exit the function
         }
-
+        console.log("access");
         // We're not intersecting, so remove the class!
         aboutDesc.classList.remove("animate-desc");
         aboutHeader.classList.remove("animate-about-header");
