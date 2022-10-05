@@ -1,7 +1,18 @@
-$primary-color: #12232e;
+// $primary-color: #12232e;
+// $secondary-color: #e1e2e2;
+// $highlight-color: #fb8122;
+// $error-color: #e51e1e;
+
+$primary-color: #022c43;
 $secondary-color: #e1e2e2;
-$highlight-color: #fb8122;
+$highlight-color: #ffd700;
 $error-color: #e51e1e;
+$success-color: #16a524;
+
+// $primary-color: #222831;
+// $secondary-color: #eeeeee;
+// $highlight-color: #d65a31;
+// $error-color: #e51e1e;
 
 $highligh-lighten-10: lighten($highlight-color, 10%);
 

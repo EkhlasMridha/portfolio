@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { CloseIcon, SuccessIcon } from "../../icons/svg.custom";
 import "./RootlineToast.scss";
 import { RootlineToastProps } from "./toast.type";
 
@@ -14,9 +15,16 @@ export const RootlineToast = (props: RootlineToastProps) => {
         className="toast-close-btn cursor-pointer"
         onClick={() => close && close(index ?? "")}
       >
-        x
+        <CloseIcon height={10} />
       </button>
-      <div {...restProps}>{text}</div>
+      <div {...restProps} className="text-content">
+        <SuccessIcon
+          height={20}
+          style={{ marginRight: "8px" }}
+          className="margin-top-bottom-auto"
+        />
+        <span className="margin-top-bottom-auto">{text}</span>
+      </div>
     </div>
   );
 };

@@ -12,6 +12,8 @@ import { ReactComponent as RightAngle } from "../svgs/right-slide.svg";
 import { ReactComponent as Contents } from "../svgs/contents.svg";
 import { ReactComponent as SendMail } from "../svgs/send-mail.svg";
 import { ReactComponent as PuffAnimated } from "../svgs/puff.svg";
+import { ReactComponent as Success } from "../svgs/success.svg";
+import { ReactComponent as Close } from "../svgs/close.svg";
 
 export const UserFilled = (props: SVGProps<any>) => {
   return <User {...props} />;
@@ -63,4 +65,12 @@ export const MailSent = (props: SVGProps<any>) => {
 
 export const PuffLoader = (props: SVGProps<any>) => {
   return <PuffAnimated {...props} />;
+};
+
+export const SuccessIcon = (props: SVGProps<any>) => {
+  return <Success {...props} />;
+};
+
+export const CloseIcon = (props: SVGProps<any>) => {
+  return <Close {...props} />;
 };
