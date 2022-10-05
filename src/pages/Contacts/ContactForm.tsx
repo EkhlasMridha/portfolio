@@ -125,9 +125,6 @@ export const ContactForm = (props: any) => {
           <span>Sending...</span>
         </div>
       </div>
-      <button type="button" onClick={showToaster}>
-        Test toast
-      </button>
     </form>
   );
 };
