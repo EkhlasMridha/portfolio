@@ -1,6 +1,11 @@
-import React, { lazy } from "react";
+import React, { lazy, useEffect } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { PageLoader } from "./shared/PageLoader/PageLoader";
+import ReactGA from "react-ga";
+
+const TRACKING_ID = "G-D2Q5SFQDNV";
+
+ReactGA.initialize(TRACKING_ID);
 
 const RootPage = lazy(() => import("./pages/RootPage"));
 const EventTicketing = lazy(() => import("./pages/WorkDetails/EvetnTicketing"));
@@ -28,6 +33,10 @@ function App() {
       element: <MooIn />,
     },
   ]);
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   return (
     <>
