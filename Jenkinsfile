@@ -1,14 +1,7 @@
 pipeline{
     agent any
    stages{
-        stage('initialize'){
-            steps{
-                script {
-                    properties([pipelineTriggers([pollSCM('')])])
-            }
-            }
-        }
-        stage('package'){
+        stage('install packages'){
             steps{
                 echo 'Installing packages'
                 sh 'npm install'
