@@ -10,7 +10,6 @@ pipeline{
         }
         stage('package'){
             steps{
-                sh 'whoami'
                 echo 'Installing packages'
                 sh 'npm install'
             }
