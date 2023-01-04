@@ -23,7 +23,7 @@ pipeline{
         stage('clean files'){
             steps{
                 echo 'cleaning previous files'
-                sh 'rm -r /var/www/html/portfolio/*'
+                sh 'rm -rfv /var/www/html/portfolio/*'
             }
         }
         stage('deploy'){
