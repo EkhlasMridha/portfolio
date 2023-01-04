@@ -16,12 +16,12 @@ export const About = (props: any) => {
             always keep myself up to date with the latest technologies and
             passionate to learn new things.
           </p>
-          {/* <p>
+          <p>
             I don’t like to define myself by the work I have done. I want to
             define myself by the work I want to do. I like to take challenges
             whenever it comes to do something out of the box. It’s not only just
             about my career, it’s my passion to do exciting works.
-          </p> */}
+          </p>
         </div>
       </div>
     </section>
