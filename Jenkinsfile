@@ -20,6 +20,12 @@ pipeline{
                 sh 'CI=false npm run build'
             }
         }
+        stage('clean files'){
+            steps{
+                echo 'cleaning previous files'
+                sh 'rm -r /var/www/html/portfolio/*'
+            }
+        }
         stage('deploy'){
             steps{
                 echo 'Deploying project'
