@@ -23,7 +23,7 @@ pipeline{
         stage('deploy'){
             steps{
                 echo 'Deploying project'
-                sh 'cp -r /var/lib/jenkins/workspace/first-jenkin/build/ /var/www/html/portfolio'
+                sh 'cp -r build/. /var/www/html/portfolio/'
             }
         }
     }
