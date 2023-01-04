@@ -23,7 +23,7 @@ pipeline{
         stage('deploy'){
             steps{
                 echo 'Deploying project'
-                sh 'cp -rf build/. /var/www/html/portfolio/'
+                sh 'cp -rf build/. /var/www/html/portfolio'
             }
         }
     }
