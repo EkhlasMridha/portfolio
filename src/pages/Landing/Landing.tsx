@@ -41,7 +41,9 @@ export const Landing = (props: any) => {
           <h1 className="uppercase greeting">
             Hi<span className="highlight-color">!</span> I am,
           </h1>
-          <h1 className="myname uppercase">Ekhlas Mridha</h1>
+          <h1 className="myname uppercase">
+            Ekhlas Mridha (To Trigger master branch update)
+          </h1>
           <div className="work-type highlight-lighten">Web Developer</div>
           <div className="work-type highlight-lighten">Web Designer</div>
         </div>
