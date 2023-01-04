@@ -17,7 +17,7 @@ pipeline{
         stage('build'){
             steps{
                 echo 'Building project'
-                sh 'npm run build'
+                sh 'CI=false npm run build'
             }
         }
         stage('deploy'){
