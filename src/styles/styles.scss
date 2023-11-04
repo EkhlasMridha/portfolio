@@ -102,6 +102,13 @@ html {
   border-bottom: 1px solid colors.$highlight-color;
 }
 
+@media screen and (max-width: 550px) {
+  .text-container-line {
+    padding: 0;
+    border-bottom: none;
+  }
+}
+
 .white-background {
   background: #fff;
 }
