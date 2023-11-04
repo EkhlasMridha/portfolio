@@ -4,7 +4,7 @@ import "./PageLoader.scss";
 export const PageLoader = (props: any) => {
   return (
     <div className="page-background primary-background">
-      <AvatarIcon height={100} />
+      <AvatarIcon height={100} className="highlight-color" />
     </div>
   );
 };

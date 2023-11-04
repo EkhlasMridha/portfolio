@@ -15,23 +15,22 @@
       display: inline-block;
       margin-top: auto;
       margin-bottom: auto;
-      font-size: 1.5em;
-
       .greeting {
-        font-size: 1.4em;
+        font-size: 36px;
       }
-      .myname {
-        margin: 8px 0px;
-        font-size: 1.6em;
+      .designation-container {
+        margin-top: 24px;
+        width: max-content;
+        display: flex;
+        .designation {
+          font-size: 16px;
+          color: #242424;
+          padding: 3px 12px 0px 6px;
+        }
       }
       h1 {
         margin-bottom: 0px;
         margin-top: 0px;
-      }
-      .divider-line {
-        margin: 6px 0px;
-        max-width: 250px;
-        height: 1px;
       }
       h2 {
         margin: 0px;
@@ -52,6 +51,16 @@
       }
     }
   }
+}
+
+.shimoolz-sign {
+  position: absolute;
+  bottom: -51px;
+  z-index: 9999;
+  left: 74px;
+  height: 53px;
+  mix-blend-mode: hard-light;
+  display: flex;
 }
 
 .work-type {
@@ -90,9 +99,10 @@
   .landing-page {
     .landing-content {
       .graphics-container {
-        max-width: 250px;
+        margin-top: 40px;
+        max-width: 230px;
         .brand-avatar {
-          height: 100px;
+          height: 90px;
         }
       }
     }

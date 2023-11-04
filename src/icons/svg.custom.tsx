@@ -9,11 +9,11 @@ import { ReactComponent as LeftArrow } from "../svgs/left-arrow.svg";
 import { ReactComponent as AvatarShape } from "../svgs/avatar-icon.svg";
 import { ReactComponent as LeftAngle } from "../svgs/left-slide.svg";
 import { ReactComponent as RightAngle } from "../svgs/right-slide.svg";
-import { ReactComponent as Contents } from "../svgs/contents.svg";
 import { ReactComponent as SendMail } from "../svgs/send-mail.svg";
 import { ReactComponent as PuffAnimated } from "../svgs/puff.svg";
 import { ReactComponent as Success } from "../svgs/success.svg";
 import { ReactComponent as Close } from "../svgs/close.svg";
+import { ReactComponent as Shimoolz } from "../svgs/shimoolz.svg";
 
 export const UserFilled = (props: SVGProps<any>) => {
   return <User {...props} />;
@@ -55,10 +55,6 @@ export const SliderRight = (props: SVGProps<any>) => {
   return <RightAngle {...props} />;
 };
 
-export const LandingElements = (props: SVGProps<any>) => {
-  return <Contents {...props} />;
-};
-
 export const MailSent = (props: SVGProps<any>) => {
   return <SendMail {...props} />;
 };
@@ -73,4 +69,8 @@ export const SuccessIcon = (props: SVGProps<any>) => {
 
 export const CloseIcon = (props: SVGProps<any>) => {
   return <Close {...props} />;
+};
+
+export const ShimoolzIcon = (props: SVGProps<SVGSVGElement>) => {
+  return <Shimoolz {...props} />;
 };

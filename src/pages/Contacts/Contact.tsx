@@ -16,7 +16,7 @@ export const Contact = (props: any) => {
           </div>
           <div className="question cursor-text">Want to reach out to me?</div>
           <div className="q-detail cursor-text">
-            Put on your glass and send me a message with the topic to discuss.
+            Send me a message with the topic to discuss.
           </div>
           <div className="contact-mail cursor-pointer">
             <MailIFilled height={"14px"} />

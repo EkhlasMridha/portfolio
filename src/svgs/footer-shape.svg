@@ -4,10 +4,9 @@
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 1366.05 134.82"
 >
-  <title></title>
   <path
     d="M1366,416.82H0C210.45,329.93,441.12,282,683,282S1155.5,329.93,1366,416.82Z"
     transform="translate(0.05 -282)"
-    fill="#022c43"
+    fill="currentColor"
   />
 </svg>

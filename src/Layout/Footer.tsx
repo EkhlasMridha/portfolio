@@ -11,14 +11,14 @@ export const Footer = (props: any) => {
   let currenYear = new Date().getFullYear();
   return (
     <footer className="white-background app-footer flx flx-col app-footer">
-      <FooterRound style={{ display: "block" }} />
+      <FooterRound style={{ display: "block" }} className="primary-color" />
       <div className="footer-content-container primary-background flx">
         <div
           style={{ rowGap: 20 }}
           className="content-container padding-side-20 primary-textcolor justify-center app-footer-content flx flx-col"
         >
           <div className="footer-avatar flx justify-center">
-            <AvatarIcon height={40} className="avatar-icon" />
+            <AvatarIcon height={40} className="avatar-icon highlight-color" />
           </div>
 
           <div
@@ -41,7 +41,8 @@ export const Footer = (props: any) => {
             </a>
           </div>
           <div className="copyright">
-            Copyright&copy;{currenYear} Ekhlas Ali Mridha All Rights Reserved
+            Copyright&copy;{currenYear} Ekhlas mridha (Shimul) All Rights
+            Reserved
           </div>
         </div>
       </div>
