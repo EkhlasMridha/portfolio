@@ -70,51 +70,21 @@ export const Landing = (props: any) => {
 
             <img
               src="./assets/images/my_avatar.png"
-              style={{
-                height: "190px",
-                position: "absolute",
-                bottom: 10,
-                right: 20,
-                display: "flex",
-              }}
+              className="avatar-image"
               alt="shimul_mridha"
             />
 
             <div
-              style={{
-                height: 18,
-                width: 210,
-                position: "absolute",
-                transform: "rotate(-29deg)",
-                borderRadius: 45,
-                bottom: 22,
-                right: -40,
-              }}
-              className="highlight-background"
+              className="highlight-background line-elements position1"
+              id="pos1_animate"
             />
             <div
-              style={{
-                height: 18,
-                width: 210,
-                position: "absolute",
-                transform: "rotate(-29deg)",
-                borderRadius: 45,
-                bottom: 20,
-                right: -10,
-              }}
-              className="white-background"
+              className="white-background line-elements position2"
+              id="pos2_animate"
             />
             <div
-              style={{
-                height: 18,
-                width: 210,
-                position: "absolute",
-                transform: "rotate(-29deg)",
-                borderRadius: 45,
-                bottom: -4,
-                right: -32,
-              }}
-              className="white-background"
+              className="white-background line-elements position3"
+              id="pos3_animate"
             />
 
             <div className="shimoolz-sign">

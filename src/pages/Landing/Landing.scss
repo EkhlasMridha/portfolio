@@ -63,11 +63,35 @@
   display: flex;
 }
 
-.work-type {
-  opacity: 0;
-  animation: 1s worktypeanim forwards;
-  font-weight: 700;
-  letter-spacing: 3px;
+.line-elements {
+  height: 18px;
+  width: 210px;
+  position: absolute;
+  transform: rotate(-29deg);
+  border-radius: 45px;
+}
+
+.line-elements.position1 {
+  bottom: 22px;
+  right: -40px;
+}
+
+.line-elements.position2 {
+  bottom: 20px;
+  right: -10px;
+}
+
+.line-elements.position3 {
+  bottom: -4px;
+  right: -32px;
+}
+
+.avatar-image {
+  height: 190px;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  display: flex;
 }
 
 @media screen and (max-width: 550px) {
@@ -109,77 +133,37 @@
   }
 }
 
-@keyframes worktypeanim {
-  from {
-    opacity: 0;
-    transform: translate(-5px, 0px);
-  }
-  to {
-    opacity: 1;
-    transform: translate(0px, 0px);
-  }
-}
-
 /* ====== svg animation style ===== */
 
-#square-scree-1,
-#square-scree-2 {
-  animation: floatY 1s infinite ease-in-out alternate;
-}
-
-#big-screen-front {
-  animation: bigScreenFront 1.8s infinite ease-in-out alternate;
+#pos1_animate {
+  animation: floatAnimation_1 1.8s infinite ease-in-out alternate;
   animation-delay: 0.5s;
 }
 
-#big-screen-back {
-  animation: bigScreenBack 1.8s infinite ease-in-out alternate;
+#pos2_animate {
+  animation: floatAnimation_2 1.8s infinite ease-in-out alternate;
 }
 
-#square-scree-1 {
-  animation-delay: 0.5s;
+#pos3_animate {
+  animation: floatAnimation_1 1.2s infinite ease-in-out alternate;
+  animation-delay: 0.6s;
 }
 
-#square-scree-2 {
-  animation-delay: 0.1s;
-}
-
-#future-loader-1 {
-  animation-name: spinR;
-  animation-duration: 15000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  transform-origin: 630px 171px;
-  transform: translateZ(0);
-}
-
-@keyframes bigScreenFront {
-  100% {
-    transform: translate(10px, 10px);
-  }
-}
-
-@keyframes bigScreenBack {
+@keyframes floatAnimation_1 {
   0% {
-    transform: translate(-5px, -10px);
+    transform: translateY(-5px) rotate(-29deg);
   }
   100% {
-    transform: translate(0px, -5px);
+    transform: translateY(-10px) rotate(-29deg);
   }
 }
 
-@keyframes floatY {
+@keyframes floatAnimation_2 {
+  0% {
+    transform: translateY(-8px) rotate(-29deg);
+  }
   100% {
-    transform: translate(5px, 12px);
-  }
-}
-
-@keyframes spinR {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+    transform: translateY(0px) rotate(-29deg);
   }
 }
 /* ====== end ===== */
