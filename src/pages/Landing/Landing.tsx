@@ -71,7 +71,7 @@ export const Landing = (props: any) => {
             <img
               src="./assets/images/my_avatar.png"
               className="avatar-image"
-              alt="shimul_mridha"
+              alt="shimul_mridha_ekhlas_mridha"
             />
 
             <div
@@ -88,7 +88,7 @@ export const Landing = (props: any) => {
             />
 
             <div className="shimoolz-sign">
-              <ShimoolzIcon className="primary-color" />
+              <ShimoolzIcon className="primary-color" style={{ height: 53 }} />
             </div>
           </div>
           <AnalogClock />
