@@ -105,7 +105,12 @@
 
 @media screen and (max-width: 450px) {
   .landing-page {
+    align-items: start;
     .landing-content {
+      .left-content {
+        margin-top: 120px;
+        margin-bottom: 0px;
+      }
       .graphics-container {
         margin-top: 40px;
         max-width: 230px;
