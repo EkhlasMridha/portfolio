@@ -1,17 +1,17 @@
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import "./clock.scss";
 
 export const AnalogClock = () => {
-  const hour = document.getElementById("hour");
-  const minute = document.getElementById("minute");
-  const seconds = document.getElementById("seconds");
+  const hour = useRef<HTMLDivElement>(null);
+  const minute = useRef<HTMLDivElement>(null);
+  const seconds = useRef<HTMLDivElement>(null);
   let interval: any;
 
   useEffect(() => {
+    clearInterval(interval);
     interval = setInterval(() => {
       clock();
     }, 1000);
-
     return () => {
       clearInterval(interval);
     };
@@ -27,20 +27,27 @@ export const AnalogClock = () => {
     let calcMin = min * 6 + sec / 10 + 90;
     let calcHour = hr * 30 + min / 2 + 90;
 
-    if (!hour || !minute || !seconds) return;
-
-    hour.style.transform = `rotate(${calcHour}deg)`;
-    minute.style.transform = `rotate(${calcMin}deg)`;
-    seconds.style.transform = `rotate(${calcSec}deg)`;
+    if (!hour.current || !minute.current || !seconds.current) return;
+    hour.current.style.transform = `rotate(${calcHour}deg)`;
+    minute.current.style.transform = `rotate(${calcMin}deg)`;
+    seconds.current.style.transform = `rotate(${calcSec}deg)`;
   }
 
   return (
     <div className="clock">
       <div className="clock-glow large-glow highlight-background"></div>
       <div className="clock-center primary-background"></div>
-      <div className="hand hour primary-background" id="hour"></div>
-      <div className="hand minute primary-background" id="minute"></div>
-      <div className="hand seconds highlight-background" id="seconds"></div>
+      <div className="hand hour primary-background" id="hour" ref={hour}></div>
+      <div
+        className="hand minute primary-background"
+        id="minute"
+        ref={minute}
+      ></div>
+      <div
+        className="hand seconds highlight-background"
+        id="seconds"
+        ref={seconds}
+      ></div>
     </div>
   );
 };

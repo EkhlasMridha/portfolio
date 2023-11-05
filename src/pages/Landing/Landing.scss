@@ -32,10 +32,6 @@
         margin-bottom: 0px;
         margin-top: 0px;
       }
-      h2 {
-        margin: 0px;
-        font-size: 1.3em;
-      }
     }
 
     .graphics-container {
@@ -47,7 +43,6 @@
       .brand-avatar {
         height: 150px;
         position: absolute;
-        // left: 90px;
       }
     }
   }
@@ -92,12 +87,6 @@
   bottom: 10px;
   right: 20px;
   display: flex;
-}
-
-@media screen and (max-width: 550px) {
-  .work-type {
-    text-align: center;
-  }
 }
 
 @media screen and (max-width: 750px) {

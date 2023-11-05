@@ -13,6 +13,15 @@
   align-items: center;
 }
 
+@media screen and (max-width: 550px) {
+  .clock {
+    width: 55px;
+    height: 55px;
+    left: -16px;
+    top: -15px;
+  }
+}
+
 .hand {
   right: 49%;
   position: absolute;
@@ -26,18 +35,18 @@
 .hand.hour {
   width: 30%;
   z-index: 8;
-  height: 8px;
+  height: 6px;
 }
 
 .hand.minute {
-  height: 6px;
+  height: 4px;
   z-index: 10;
   width: 40%;
 }
 
 .hand.seconds {
   width: 45%;
-  height: 3px;
+  height: 2px;
   z-index: 12;
 }
 
