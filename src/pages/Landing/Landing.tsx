@@ -50,11 +50,13 @@ export const Landing = (props: any) => {
               <span className="designation">Web app developer</span>
             </div>
             <div className="animation-block"></div>
-            <ShimulMridhaIcon
+            <h1
               className="text-white shimul_mridha"
               aria-label="Shimul mridha"
               aria-describedby="Ekhlas mridha"
-            />
+            >
+              Shimul mridha
+            </h1>
           </div>
         </div>
         <div className="graphics-container justify-center" key={"graphics"}>

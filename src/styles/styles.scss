@@ -27,6 +27,16 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "GoldLines";
+  src: url("../../public/assets/fonts/GoldLinesTrial-Regular.woff2")
+      format("woff2"),
+    url("../../public/assets/fonts/GoldLinesTrial-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   margin: 0;
   font-family: "FuturaPT";
@@ -106,6 +116,7 @@ html {
   .text-container-line {
     padding: 0;
     border-bottom: none;
+    max-width: 100%;
   }
 }
 
