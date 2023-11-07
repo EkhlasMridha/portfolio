@@ -9,10 +9,32 @@ import { Works } from "./Works/Works";
 const RootPage = () => {
   useEffect(() => {
     let content = document.querySelector(".about-content");
+    let contactContent = document.getElementById("contact");
     if ((content ?? "") !== "") {
       obServeAndAnimateAbout(content as Element);
     }
+    if (!!contactContent) {
+      console.log(contactContent);
+      observeContactPage(contactContent);
+    }
   }, []);
+
+  function observeContactPage(content: Element) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const reachOutText = entry.target.querySelector(".question") as Element;
+
+        if (entry.isIntersecting) {
+          reachOutText.classList.add("text--blocks");
+          return;
+        }
+
+        reachOutText.classList.remove("text--blocks");
+      });
+    });
+
+    observer.observe(content);
+  }
 
   function obServeAndAnimateAbout(content: Element) {
     const observer = new IntersectionObserver((entries) => {
@@ -27,10 +49,11 @@ const RootPage = () => {
         if (entry.isIntersecting) {
           aboutDesc.classList.add("animate-desc");
           aboutHeader.classList.add("animate-about-header");
+
           return; // if we added the class, exit the function
         }
-        console.log("access");
         // We're not intersecting, so remove the class!
+
         aboutDesc.classList.remove("animate-desc");
         aboutHeader.classList.remove("animate-about-header");
       });

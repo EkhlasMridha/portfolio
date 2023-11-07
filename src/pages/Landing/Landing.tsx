@@ -38,7 +38,8 @@ export const Landing = (props: any) => {
       <div className="landing-content content-container padding-side-20">
         <div className="left-content primary-color" key={"lefcontent"}>
           <h1 className="greeting text-white">
-            Let’s bring your <br /> unique idea into reality
+            <span>Let’s bring your</span>
+            <span>unique idea into reality</span>
           </h1>
           <div
             className="text-container-line"
@@ -48,6 +49,7 @@ export const Landing = (props: any) => {
             <div className="text-container-shape designation-container">
               <span className="designation">Web app developer</span>
             </div>
+            <div className="animation-block"></div>
             <ShimulMridhaIcon
               className="text-white shimul_mridha"
               aria-label="Shimul mridha"

@@ -10,11 +10,17 @@ export const Contact = (props: any) => {
       id="contact"
     >
       <div className="section-1 half-section  primary-background primary-textcolor">
-        <div className="padding-side-20 content-container contact-text-section">
+        <div className="page padding-side-20 content-container contact-text-section">
           <div className="uppercase highlight-color contact-title cursor-text">
             Contact
           </div>
-          <div className="question cursor-text">Want to reach out to me?</div>
+          <div
+            className="question cursor-text"
+            data-word="Want to reach out to me?"
+            data-scroll="out"
+          >
+            Want to reach out to me?
+          </div>
           <div className="q-detail cursor-text">
             Send me a message with the topic to discuss.
           </div>
