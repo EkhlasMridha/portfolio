@@ -14,6 +14,7 @@ import { ReactComponent as PuffAnimated } from "../svgs/puff.svg";
 import { ReactComponent as Success } from "../svgs/success.svg";
 import { ReactComponent as Close } from "../svgs/close.svg";
 import { ReactComponent as Shimoolz } from "../svgs/shimoolz.svg";
+import { ReactComponent as ShimulMridha } from "../svgs/shimul_mridha.svg";
 
 export const UserFilled = (props: SVGProps<any>) => {
   return <User {...props} />;
@@ -73,4 +74,8 @@ export const CloseIcon = (props: SVGProps<any>) => {
 
 export const ShimoolzIcon = (props: SVGProps<SVGSVGElement>) => {
   return <Shimoolz {...props} />;
+};
+
+export const ShimulMridhaIcon = (props: SVGProps<SVGSVGElement>) => {
+  return <ShimulMridha {...props} />;
 };

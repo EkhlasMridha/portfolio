@@ -1,4 +1,4 @@
-import { ShimoolzIcon } from "../../icons/svg.custom";
+import { ShimoolzIcon, ShimulMridhaIcon } from "../../icons/svg.custom";
 import { AnalogClock } from "../../shared/AnalogClock";
 import "./Landing.scss";
 
@@ -40,10 +40,19 @@ export const Landing = (props: any) => {
           <h1 className="greeting text-white">
             Let’s bring your <br /> unique idea into reality
           </h1>
-          <div className="text-container-line">
+          <div
+            className="text-container-line"
+            style={{ position: "relative" }}
+            aria-describedby="heading"
+          >
             <div className="text-container-shape designation-container">
-              <span className="designation">Full stack web app developer</span>
+              <span className="designation">Web app developer</span>
             </div>
+            <ShimulMridhaIcon
+              className="text-white shimul_mridha"
+              aria-label="Shimul mridha"
+              aria-describedby="Ekhlas mridha"
+            />
           </div>
         </div>
         <div className="graphics-container justify-center" key={"graphics"}>
